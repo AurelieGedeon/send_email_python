@@ -9,6 +9,11 @@ if len(sys.argv) == 2:
     if command == 'send_email':
         email_sender = input('What email would you like to use? ')
         email_receiver = input('To whom would you like to send this email? ')
+        has_mutliple_emails = input(
+            'Will you be sending this to multiple people? (y/n) ').lower()
+        if has_mutliple_emails == "y":
+            email_input = input('Enter your emails separated by spaces: ')
+            email_list = email_input.split()
 
         subject = input('What would you like your subject to be? ')
         body = input('What would you like to include in the body? ')
